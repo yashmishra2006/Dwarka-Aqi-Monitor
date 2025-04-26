@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 bg-gray-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-gray-900 tracking-tight;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-200 hover:shadow-md;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-600 text-white hover:bg-secondary-700;
+  }
+  
+  .aqi-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .aqi-badge-good {
+    @apply bg-aqi-good/20 text-green-800;
+  }
+  
+  .aqi-badge-moderate {
+    @apply bg-aqi-moderate/20 text-yellow-800;
+  }
+  
+  .aqi-badge-sensitive {
+    @apply bg-aqi-sensitive/20 text-orange-800;
+  }
+  
+  .aqi-badge-unhealthy {
+    @apply bg-aqi-unhealthy/20 text-red-800;
+  }
+  
+  .aqi-badge-very-unhealthy {
+    @apply bg-aqi-very-unhealthy/20 text-purple-800;
+  }
+  
+  .aqi-badge-hazardous {
+    @apply bg-aqi-hazardous/20 text-red-900;
+  }
+}
